@@ -3,7 +3,6 @@ package com.example.ctask.Activites;
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,10 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.ctask.Constants.Constants;
 import com.example.ctask.Interfaces.APIInterface;
 import com.example.ctask.MainActivity;
-import com.example.ctask.Models.Result;
 import com.example.ctask.Models.UserData;
 import com.example.ctask.R;
-import com.example.ctask.Responses.GetLoginData;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

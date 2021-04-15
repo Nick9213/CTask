@@ -6,16 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24f59fcd-e0a0-46b4-9514-6b3a787d1a6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ctask/Fragments/ChefFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ctask/Fragments/ChefFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-    </list>
+    <list default="true" id="24f59fcd-e0a0-46b4-9514-6b3a787d1a6f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,6 +119,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="311" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1366.103.1366.768/0.0.1792.1120@0.0.1792.1120" timestamp="1618460538253" />
+    <state x="545" y="370" key="com.intellij.ide.util.TipDialog" timestamp="1618461066534">
+      <screen x="0" y="25" width="1792" height="1033" />
+    </state>
+    <state x="545" y="370" key="com.intellij.ide.util.TipDialog/-1366.128.1366.743/0.25.1792.1033@0.25.1792.1033" timestamp="1618461066534" />
     <state x="561" y="254" width="670" height="676" key="search.everywhere.popup" timestamp="1618460744915">
       <screen x="0" y="25" width="1792" height="1033" />
     </state>

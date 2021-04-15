@@ -11,7 +11,4 @@ public interface APIInterface {
 
     @POST("login")
     Call<UserData> sendUserDetails(@Body UserData userData);
-
-    @POST("login")
-    Call<GetLoginData> sendUserData(@Body UserData userData);
 }
