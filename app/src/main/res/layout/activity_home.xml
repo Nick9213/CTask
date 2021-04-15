@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".Activites.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/white"
+            app:expandedTitleMarginBottom="@dimen/_20sdp"
+            app:expandedTitleMarginStart="@dimen/_15sdp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:background="@color/white"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/foodbg"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ivBackButton"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:background="@drawable/white_bg"
+                            android:padding="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:src="@drawable/ic_arrow_back_ios_24" />
+
+                        <ImageView
+                            android:id="@+id/ivBookmarksButton"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/white_bg"
+                            android:padding="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:src="@drawable/ic_favorite_border_24" />
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardUserProfile"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_115sdp"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/userProfileImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@mipmap/ic_launcher" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <RelativeLayout
+                        android:id="@+id/userProfileDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardUserProfile"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:paddingHorizontal="@dimen/_20sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/chefDetailLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/chefNameLayout"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/userName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Chef Name"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp">
+
+                                    <TextView
+                                        android:id="@+id/userChefRatings"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="5.0"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_15ssp"
+                                        android:textStyle="bold" />
+
+
+                                    <RatingBar
+                                        android:id="@+id/userChefRatingsStart"
+                                        style="?android:attr/ratingBarStyleSmall"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_toRightOf="@+id/userChefRatings"
+                                        android:isIndicator="false"
+                                        android:numStars="5"
+                                        android:rating="4"
+                                        android:stepSize="1.0" />
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_toRightOf="@+id/chefNameLayout">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/_11sdp"
+                                    android:layout_toLeftOf="@+id/followingLayers"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/userChefFollowingNumber"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="500"
+                                        android:textColor="@color/green"
+                                        android:textSize="@dimen/_15ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/userChefFollowingText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Following"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/followingLayers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/userChefFollowersNumber"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="50K"
+                                        android:textColor="@color/green"
+                                        android:textSize="@dimen/_15ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/userChefFollowersText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Followers"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buttonLayout"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/chefDetailLayout"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:weightSum="2">
+
+                            <Button
+                                android:id="@+id/btnFollow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/follow_button_bg"
+                                android:text="Follow"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+
+
+                            <Button
+                                android:id="@+id/btnSendFood"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_toRightOf="@+id/btnFollow"
+                                android:layout_weight="1"
+                                android:background="@drawable/send_food_bg"
+                                android:text="Send Food"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Platform.MaterialComponents.Light">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/chefTabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tabGravity="start"
+                app:tabIndicator="@color/green"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="fixed" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/cheViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_500sdp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

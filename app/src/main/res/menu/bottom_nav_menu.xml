@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_nav_AddFood"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_food_24"
+        android:title="Add Food"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bottom_nav_Home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_24"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bottom_nav_Chef"
+        android:enabled="true"
+        android:icon="@drawable/ic_chef_24"
+        android:title="Chef"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bottom_nav_Charity"
+        android:enabled="true"
+        android:icon="@drawable/ic_charity_24"
+        android:title="Charity"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bottom_nav_Cart"
+        android:enabled="true"
+        android:icon="@drawable/ic_cart_24"
+        android:title="Cart"
+        app:showAsAction="ifRoom" />
+</menu>
