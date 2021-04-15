@@ -1,5 +1,6 @@
 package com.example.ctask.Activites;
 
+import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
 
     String email, password;
     SharedPreferences sp;
-
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         sp = getSharedPreferences(Constants.PREF, MODE_PRIVATE);
+        progressDialog = new ProgressDialog(LoginActivity.this);
+        progressDialog.setMessage("Please wait..");
+        progressDialog.setCancelable(false);
     }
 
 
@@ -70,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             UserData userData = new UserData(email, password);
             sendRequest(userData);
+            progressDialog.show();
         }
     }
 
@@ -95,13 +100,15 @@ public class LoginActivity extends AppCompatActivity {
                 Integer followings = response.body().getResult().getFollowings();
                 String hashToken = response.body().getResult().getHashToken();
                 Constants.setAllDataIntoLocalDatabase(LoginActivity.this, userName, userId, mobileNo, location, latitude, userImage, biography, isFavourite, avgRating, currency, followers, followings, hashToken);
+                progressDialog.dismiss();
                 Constants.explicitIntent(LoginActivity.this, MainActivity.class);
                 finish();
             }
 
             @Override
             public void onFailure(Call<UserData> call, Throwable t) {
-                Log.d("Error", t.toString());
+                //Log.d("Error", t.toString());
+                progressDialog.dismiss();
                 Toast.makeText(LoginActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
