@@ -103,7 +103,11 @@ public class ChefFragment extends Fragment {
         userChefRatings.setText(sp.getString(Constants.avgRating, ""));
         userChefFollowersNumber.setText(sp.getString(Constants.followers, ""));
         userChefFollowingNumber.setText(sp.getString(Constants.following, ""));
-        Picasso.get().load(sp.getString(Constants.userImage, "")).into(userProfileImage);
+        if (sp.getString(Constants.userImage, "") == null) {
+            Picasso.get().load(R.drawable.foodbg).into(userProfileImage);
+        } else {
+            Picasso.get().load(sp.getString(Constants.userImage, "")).into(userProfileImage);
+        }
 
         setFavourite();
         setAvgRatingStar();

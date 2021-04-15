@@ -9,6 +9,7 @@
     <FrameLayout
         android:id="@+id/fragmentView"
         android:layout_width="match_parent"
+        android:layout_above="@+id/bottom_navigation_nav"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true" />
 
